@@ -243,10 +243,6 @@ class compression:
                                     
                                     nameas=name+".bin" 
                                     
-                                    bit=""
-
-                                    
-
                                     e=(2**Deep2)-1
                                     g=0
                                     f=0
@@ -265,7 +261,6 @@ class compression:
                                                 g=g+1
                                           
                                         if g>(2**Deep)-1:
-                                                bit="1"
                                                 Number_of_the_file=Number_of_the_file-1
                                                 Deep2=Deep2+1
                                                 Deep=Deep+1
