@@ -25,7 +25,7 @@ class compression:
                     if namez=="c":
 
                                                 
-                        Deep=2
+                        Deep=1
                         Deep2=Deep+2
                         Deep3=8
                         
@@ -252,7 +252,7 @@ class compression:
                                         if T1==0:
                                                 Number_of_the_file=Number_of_the_file//e
                                                 f=1
-                                                Deep=2
+                                                Deep=1
                                                 Deep2=Deep+2
 
                                         else:
