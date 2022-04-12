@@ -232,7 +232,10 @@ class compression:
                                     Equal_info_between_of_the_cirlce_of_the_file_17=""
                  
                                     if   Circle_times2==0 and SpinS==0:
+                                    	
+                                    
                                     	Equal_info_between_of_the_cirlce_of_the_file="1"+Equal_info_between_of_the_cirlce_of_the_file
+                                    	
                                     	SpinS=1
                                     	Block_Check=Equal_info_between_of_the_cirlce_of_the_file[0:32]
                                     	lenf10=len(Equal_info_between_of_the_cirlce_of_the_file)
@@ -256,6 +259,7 @@ class compression:
                                         T1=Number_of_the_file%e
                                         if T1==0:
                                                 Number_of_the_file=Number_of_the_file//e
+                                               
                                                 f=1
                                                 
 
@@ -280,8 +284,10 @@ class compression:
                                             
                                     if compress_or_not_compress==1:
                                     		nameas=name+".bin"
-                                    if Number_of_the_file<0:
+                                    if Number_of_the_file<1:
                                                         compress_or_not_compress=2
+                                                      
+                                                       
                                     
                                   
                                     if compress_or_not_compress==1:
@@ -323,6 +329,13 @@ class compression:
                                     #print(lenfS)
                                     if lenf6==lenfS:
                                             Deep3=lenfS
+                                    if  (lenf7*8)*2<lenfS:
+                                        print("Error file can't compress!")
+                                        raise SystemExit
+                                        
+                                    
+                                        
+                                    
                                             
 
                                     
