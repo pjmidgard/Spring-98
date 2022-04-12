@@ -260,7 +260,7 @@ class compression:
                                                 g=g+1
                                           
                                         if g>(2**Deep)-1:
-                                                Number_of_the_file=Number_of_the_file-1
+                                
                                                 Deep2=Deep2+1
                                                 Deep=Deep+1
                                                 e=(2**Deep2)-1
