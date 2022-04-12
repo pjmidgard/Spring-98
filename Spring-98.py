@@ -234,10 +234,10 @@ class compression:
                                     if   Circle_times2==0 and SpinS==0:
                                         lenf10=len(Equal_info_between_of_the_cirlce_of_the_file)
                                         lenf10=lenf10//8
-                                    	Equal_info_between_of_the_cirlce_of_the_file="1"+Equal_info_between_of_the_cirlce_of_the_file
-                                    	SpinS=1
-                                    	Block_Check=Equal_info_between_of_the_cirlce_of_the_file[0:32]
-                                    	F=0
+                                        Equal_info_between_of_the_cirlce_of_the_file="1"+Equal_info_between_of_the_cirlce_of_the_file
+                                        SpinS=1
+                                        Block_Check=Equal_info_between_of_the_cirlce_of_the_file[0:32]
+                                        F=0
 
                                     lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
 
