@@ -31,6 +31,7 @@ class compression:
                         Circle_times4=0
                         lenfS1=2**32
                         
+                        
 
                         i=1
 
@@ -144,10 +145,12 @@ class compression:
                                             sda="0"+sda
                                             z=z+1
                                             
-                                    sda=sda+Equal_info_between_of_the_cirlce_of_the_file_2
+                                  
 
                                     if Circle_times3==1:
                                         Equal_info_between_of_the_cirlce_of_the_file_2=sda
+                                        
+                                        
                             
                                     n = int(Equal_info_between_of_the_cirlce_of_the_file_2, 2)
                                 
@@ -164,6 +167,7 @@ class compression:
                                     lenf5=len(data)
 
                                     sda=bin(int(binascii.hexlify(data),16))[2:]
+                          
                                     lenf=len(sda)
 
                                     lenf1=len(data)
@@ -329,16 +333,7 @@ class compression:
                                     #print(lenfS)
                                     if lenf6==lenfS:
                                             Deep3=lenfS
-                                    if  (lenf7*8)*2<lenfS:
-                                        print("Error file can't compress!")
-                                        raise SystemExit
-                                        
-                                    
-                                        
-                                    
-                                            
-
-                                    
+                                   
 
                                     if compress_or_not_compress==2 and Circle_times2==0:
                                                     Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[1:]
@@ -436,7 +431,7 @@ class compression:
                                             F=1
 
 
-                                    if   lenfS1+24<lenf7*8 and F==1 or Circle_times4==(2**24)-1 and F==1:
+                                    if   lenfS1+24<lenf7*8 and F==1 or Circle_times4==(2**8)-1 and F==1:
 
                                             
                                     	   
@@ -444,19 +439,25 @@ class compression:
                                             lenf=len(Equal_info_between_of_the_cirlce_of_the_file_32)
 
                                             add_bits12=""
-                                            count_bits=24-lenf%24
+                                            count_bits=8-lenf%8
                                             z=0
                                             if count_bits!=0:
-                                                if count_bits!=24:
+                                                if count_bits!=8:
                                                         while z<count_bits:
                                                          	add_bits12="0"+add_bits12
                                                          	z=z+1
-                                    if   lenfS1+24<lenf7*8 and F==1  or Circle_times4==(2**24)-1 and F==1 :
+                                    if   lenfS1+24<lenf7*8 and F==1  or Circle_times4==(2**8)-1 and F==1:
+                                           
                                             Equal_info_between_of_the_cirlce_of_the_file_17=add_bits12+Equal_info_between_of_the_cirlce_of_the_file_32+Equal_info_between_of_the_cirlce_of_the_file_17
+                                  
+                                            
                                                          	
-                                    if   lenfS1+24<lenf7*8 and F==1  or Circle_times4==(2**24)-1 and F==1 :
+                                    if   lenfS1+24<lenf7*8 and F==1  or Circle_times4==(2**8)-1 and F==1:
+                                
+                                                    
                                                 
                                     		L=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                    		
                                     		n = int(Equal_info_between_of_the_cirlce_of_the_file_17, 2)
                                     		width_bits=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                     		width_bits=(width_bits//8)*2
