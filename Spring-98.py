@@ -28,6 +28,8 @@ class compression:
                         Deep=1
                         Deep2=Deep+2
                         Deep3=8
+                        Circle_times4=0
+                        lenfS1=2**32
                         
 
                         i=1
@@ -233,6 +235,7 @@ class compression:
                                     	Equal_info_between_of_the_cirlce_of_the_file="1"+Equal_info_between_of_the_cirlce_of_the_file
                                     	SpinS=1
                                     	Block_Check=Equal_info_between_of_the_cirlce_of_the_file[0:32]
+                                    	F=0
 
                                     lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
 
@@ -315,7 +318,7 @@ class compression:
                                     
                                     lenfS=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                     
-                                    
+                                    #print(lenfS)
                                     if lenf6==lenfS:
                                             Deep3=lenfS
                                             
@@ -407,8 +410,36 @@ class compression:
                                     if   lenfS<=Deep3 or compress_or_not_compress==2:
                                             lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)                                           
                                             Equal_info_between_of_the_cirlce_of_the_file_17=Block_Check+add_bits9+Equal_info_between_of_the_cirlce_of_the_file1+add_bits8+Equal_info_between_of_the_cirlce_of_the_file0+add_bits7+Equal_info_between_of_the_cirlce_of_the_file_29+add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+                                            Equal_info_between_of_the_cirlce_of_the_file_2=Equal_info_between_of_the_cirlce_of_the_file_17
+                                            lenfS1=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                            Circle_times2=0
+                                            compress_or_not_compress=1
+                                            Deep=1
+                                            Deep2=Deep+2
+                                            SpinS=0
+                                            Circle_times4=Circle_times4+1
+                                            F=1
 
-                                    if   lenfS<=Deep3 or compress_or_not_compress==2:
+
+                                    if   lenfS1+24<lenf7*8 and F==1 or Circle_times4==(2**24)-1 and F==1:
+
+                                            
+                                    	   
+                                            Equal_info_between_of_the_cirlce_of_the_file_32=bin(Circle_times4)[2:]
+                                            lenf=len(Equal_info_between_of_the_cirlce_of_the_file_32)
+
+                                            add_bits12=""
+                                            count_bits=24-lenf%24
+                                            z=0
+                                            if count_bits!=0:
+                                                if count_bits!=24:
+                                                        while z<count_bits:
+                                                         	add_bits12="0"+add_bits12
+                                                         	z=z+1
+                                    if   lenfS1+24<lenf7*8 and F==1  or Circle_times4==(2**24)-1 and F==1 :
+                                            Equal_info_between_of_the_cirlce_of_the_file_17=add_bits12+Equal_info_between_of_the_cirlce_of_the_file_32+Equal_info_between_of_the_cirlce_of_the_file_17
+                                                         	
+                                    if   lenfS1+24<lenf7*8 and F==1  or Circle_times4==(2**24)-1 and F==1 :
                                                 
                                     		L=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                     		n = int(Equal_info_between_of_the_cirlce_of_the_file_17, 2)
