@@ -232,12 +232,12 @@ class compression:
                                     Equal_info_between_of_the_cirlce_of_the_file_17=""
                  
                                     if   Circle_times2==0 and SpinS==0:
-                                        lenf10=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                        lenf10=lenf10//8
-                                        Equal_info_between_of_the_cirlce_of_the_file="1"+Equal_info_between_of_the_cirlce_of_the_file
-                                        SpinS=1
-                                        Block_Check=Equal_info_between_of_the_cirlce_of_the_file[0:32]
-                                        F=0
+                                    	Equal_info_between_of_the_cirlce_of_the_file="1"+Equal_info_between_of_the_cirlce_of_the_file
+                                    	SpinS=1
+                                    	Block_Check=Equal_info_between_of_the_cirlce_of_the_file[0:32]
+                                    	lenf10=len(Equal_info_between_of_the_cirlce_of_the_file)
+                                    	lenf10=(lenf10-1)//8
+                                    	F=0
 
                                     lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
 
@@ -411,7 +411,7 @@ class compression:
 
                                     if   lenfS<=Deep3 or compress_or_not_compress==2:
                                             lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)                                           
-                                            Equal_info_between_of_the_cirlce_of_the_file_17=Block_Check+add_bits9+Equal_info_between_of_the_cirlce_of_the_file1+add_bits8+Equal_info_between_of_the_cirlce_of_the_file0+add_bits7+Equal_info_between_of_the_cirlce_of_the_file_29+add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+                                            Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17+Block_Check+add_bits9+Equal_info_between_of_the_cirlce_of_the_file1+add_bits7+Equal_info_between_of_the_cirlce_of_the_file_29+add_bits8+Equal_info_between_of_the_cirlce_of_the_file0
                                             Equal_info_between_of_the_cirlce_of_the_file_2=Equal_info_between_of_the_cirlce_of_the_file_17
                                             lenfS1=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             Circle_times2=0
