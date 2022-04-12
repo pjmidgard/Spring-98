@@ -232,6 +232,8 @@ class compression:
                                     Equal_info_between_of_the_cirlce_of_the_file_17=""
                  
                                     if   Circle_times2==0 and SpinS==0:
+                                        lenf10=len(Equal_info_between_of_the_cirlce_of_the_file)
+                                        lenf10=lenf10//8
                                     	Equal_info_between_of_the_cirlce_of_the_file="1"+Equal_info_between_of_the_cirlce_of_the_file
                                     	SpinS=1
                                     	Block_Check=Equal_info_between_of_the_cirlce_of_the_file[0:32]
@@ -347,7 +349,7 @@ class compression:
 
                                     if   lenfS<=Deep3 or compress_or_not_compress==2:
                                     	   
-                                            Equal_info_between_of_the_cirlce_of_the_file0=bin(lenf7)[2:]
+                                            Equal_info_between_of_the_cirlce_of_the_file0=bin(lenf10)[2:]
                                             lenf=len(Equal_info_between_of_the_cirlce_of_the_file0)
 
                                             add_bits8=""
