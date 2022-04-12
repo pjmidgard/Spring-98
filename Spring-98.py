@@ -252,7 +252,8 @@ class compression:
                                         if T1==0:
                                                 Number_of_the_file=Number_of_the_file//e
                                                 f=1
-                                                
+                                                Deep=1
+                                                Deep2=Deep+2
 
                                         else:
                                                 e=e+1
@@ -260,7 +261,7 @@ class compression:
                                                 g=g+1
                                           
                                         if g>(2**Deep)-1:
-                                
+                                                Number_of_the_file=Number_of_the_file-1
                                                 Deep2=Deep2+1
                                                 Deep=Deep+1
                                                 e=(2**Deep2)-1
@@ -294,8 +295,6 @@ class compression:
                                             	compress_or_not_compress=2
 
                                             if compress_or_not_compress==1:
-                                                    Deep=1
-                                                    Deep2=Deep+2
                                                     
                                                     add_bits4=""
                                                     count_bits=hr-lenf%hr
@@ -316,7 +315,7 @@ class compression:
                                     lenfS=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                     
                                     
-                                    if lenf6<lenfS:
+                                    if lenf6==lenfS:
                                             Deep3=lenfS
                                             
 
