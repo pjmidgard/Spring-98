@@ -431,7 +431,7 @@ class compression:
                                             F=1
 
 
-                                    if   lenfS1+24<lenf7*8 and F==1 or Circle_times4==(2**8)-1 and F==1:
+                                    if   lenfS1+8<lenf7*8 and F==1 or Circle_times4==(2**8)-1 and F==1:
 
                                             
                                     	   
@@ -446,13 +446,13 @@ class compression:
                                                         while z<count_bits:
                                                          	add_bits12="0"+add_bits12
                                                          	z=z+1
-                                    if   lenfS1+24<lenf7*8 and F==1  or Circle_times4==(2**8)-1 and F==1:
+                                    if   lenfS1+8<lenf7*8 and F==1  or Circle_times4==(2**8)-1 and F==1:
                                            
                                             Equal_info_between_of_the_cirlce_of_the_file_17=add_bits12+Equal_info_between_of_the_cirlce_of_the_file_32+Equal_info_between_of_the_cirlce_of_the_file_17
                                   
                                             
                                                          	
-                                    if   lenfS1+24<lenf7*8 and F==1  or Circle_times4==(2**8)-1 and F==1:
+                                    if   lenfS1+8<lenf7*8 and F==1  or Circle_times4==(2**8)-1 and F==1:
                                 
                                                     
                                                 
