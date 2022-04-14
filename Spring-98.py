@@ -9,7 +9,7 @@ name=""
 add_bits=""
 Make_togher=""
 
-namez = input("c,  compress")
+namez = input("c,  compress ")
 
 #@Author Jurijus Pacalovas
 class compression:
