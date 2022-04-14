@@ -497,12 +497,18 @@ class compression:
                                     Number_add_plus_one=""
                                     Prime_Not=""
                                     Times_6=""
+                                    Translate_info_Decimal_of_the_times=""
                                 
                                     Number_of_the_file=0
                                     Prime_Not=0
                                  
                                     if C==1:
                                         if   Circle_times2==0:
+
+
+                                                Translate_info_Decimal_of_the_times=Equal_info_between_of_the_cirlce_of_the_file[0:8]
+                                                Translate_info_Decimal_of_the_times_nunmbers = int(ranslate_info_Decimal_of_the_times, 2)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
 
                                                 Translate_info_Decimal=Equal_info_between_of_the_cirlce_of_the_file[0:8]
                                                 Translate_info_Decimal_2 = int(Translate_info_Decimal, 2)
