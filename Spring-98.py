@@ -99,7 +99,7 @@ class compression:
 
                         lenf1=len(data)
                         lenf7=len(data)
-                        if lenf7==(2**31)-1:
+                        if lenf7==(2**32)-1:
                         	 raise SystemExit
                         if lenf7==0:
                         	 raise SystemExit
@@ -228,7 +228,7 @@ class compression:
                                     	Equal_info_between_of_the_cirlce_of_the_file="1"+Equal_info_between_of_the_cirlce_of_the_file
                                     	
                                     	SpinS=1
-                                    	Block_Check=Equal_info_between_of_the_cirlce_of_the_file[0:32]
+                                    	Block_Check=Equal_info_between_of_the_cirlce_of_the_file[1:33]
                                     	lenf10=len(Equal_info_between_of_the_cirlce_of_the_file)
                                     	lenf10=(lenf10-1)//8
                                     	F=0
