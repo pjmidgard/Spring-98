@@ -506,12 +506,12 @@ class compression:
                                         if C==1 and T!=0:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Translate_info_Decimal_2:]
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                Number_add_plus_one1=Equal_info_between_of_the_cirlce_of_the_file[Deep4-6:Deep4+6]
+                                                Number_add_plus_one1=Equal_info_between_of_the_cirlce_of_the_file[Deep4-4:Deep4+4]
                                                 
                                                 
                                                 Number_of_the_file1= int(Equal_info_between_of_the_cirlce_of_the_file1, 2)                                      
                                                                            
-                                                Number_add_plus_one=Equal_info_between_of_the_cirlce_of_the_file[Deep4+6:lenf6]
+                                                Number_add_plus_one=Equal_info_between_of_the_cirlce_of_the_file[Deep4+4:lenf6]
                                                 
  
                                                                                            
