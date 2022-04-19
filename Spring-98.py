@@ -33,15 +33,15 @@ class compression:
                         
                         if x==True:
                                 Deep=int(Deep)
-                                Deep6=65535-25
+                                Deep6=65535-5
 
                                 if Deep>Deep6:
                                         Deep=Deep6
 
                                 if Deep<1:
-                                        Deep=26
+                                        Deep=6
                                                 
-                                Deep=Deep+25
+                                Deep=Deep+5
                                 Deep2=Deep+2
                                 Deep3=Deep*2
                                 print(Deep-25)
@@ -496,7 +496,7 @@ class compression:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[48:]
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
                                                 print("Deep: ")
-                                                print(Deep7-26)
+                                                print(Deep7)
                                                 
                                         if   Circle_times2>0:
                                         	Translate_info_Decimal_2=0
@@ -506,12 +506,12 @@ class compression:
                                         if C==1 and T!=0:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Translate_info_Decimal_2:]
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                Number_add_plus_one1=Equal_info_between_of_the_cirlce_of_the_file[lenf6:lenf6-22]
+                                                Number_add_plus_one1=Equal_info_between_of_the_cirlce_of_the_file[Deep4:Deep4+5]
                                                 
                                                 
                                                 Number_of_the_file1= int(Equal_info_between_of_the_cirlce_of_the_file1, 2)                                      
                                                                            
-                                                Number_add_plus_one=Equal_info_between_of_the_cirlce_of_the_file[Deep4-22:Deep4-22+5]
+                                                Number_add_plus_one=Equal_info_between_of_the_cirlce_of_the_file[Deep4+5:lenf6]
                                                 
  
                                                                                            
