@@ -303,7 +303,7 @@ class compression:
                                             	compress_or_not_compress=2
 
                                             if compress_or_not_compress==1:
-                                                    
+                                                    Deep=27
                                                     add_bits5=""
                                                     count_bits=hr-lenf%hr
                                                     z=0
@@ -518,7 +518,7 @@ class compression:
                                                 Number_of_the_file = int(Equal_info_between_of_the_cirlce_of_the_file, 2)
                                                 Number_add_plus_one_2 = int(Number_add_plus_one, 2)
         
-                                                Hole_Number_information=(2**Deep5-5+Number_of_the_file1-22)-1
+                                                Hole_Number_information=(2**Deep5+Number_of_the_file1-21)-1
                                                 add_ones_together=Hole_Number_information+Number_add_plus_one_2
                                                 Number_of_the_file=Number_of_the_file*add_ones_together
                                                 
