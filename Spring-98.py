@@ -294,7 +294,7 @@ class compression:
                                     	    
                                     if compress_or_not_compress==1:
                                     	                          
-                                            Equal_info_between_of_the_cirlce_of_the_file_23=bin(g)[2:]
+                                            Equal_info_between_of_the_cirlce_of_the_file_24=bin(Deep-11)[2:]
                                             hr=Deep-20
                                             
                                         	
@@ -304,13 +304,13 @@ class compression:
 
                                             if compress_or_not_compress==1:
                                                     
-                                                    add_bits4=""
+                                                    add_bits5=""
                                                     count_bits=hr-lenf%hr
                                                     z=0
                                                     if count_bits!=0:
                                                         if count_bits!=hr:
                                                                 while z<count_bits:
-                                                                        add_bits4="0"+add_bits4
+                                                                        add_bits5="0"+add_bits5
                                                                         z=z+1                                   
                                     if compress_or_not_compress==1:
                                     	                          
