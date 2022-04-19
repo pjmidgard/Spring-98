@@ -294,7 +294,7 @@ class compression:
                                     	    
                                     if compress_or_not_compress==1:
                                     	                          
-                                            Equal_info_between_of_the_cirlce_of_the_file_24=bin(Deep-11)[2:]
+                                            Equal_info_between_of_the_cirlce_of_the_file_24=bin(Deep-5)[2:]
                                             hr=Deep-22
                                             
                                         	
