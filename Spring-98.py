@@ -295,11 +295,11 @@ class compression:
                                     if compress_or_not_compress==1:
                                     	                          
                                             Equal_info_between_of_the_cirlce_of_the_file_24=bin(Deep-11)[2:]
-                                            hr=Deep-20
+                                            hr=Deep-22
                                             
                                         	
                                             lenf=len(Equal_info_between_of_the_cirlce_of_the_file_23)
-                                            if lenf>Deep-20:
+                                            if lenf>Deep-22:
                                             	compress_or_not_compress=2
 
                                             if compress_or_not_compress==1:
@@ -506,19 +506,19 @@ class compression:
                                         if C==1 and T!=0:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Translate_info_Decimal_2:]
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                Number_add_plus_one1=Equal_info_between_of_the_cirlce_of_the_file[lenf6:lenf6-20]
+                                                Number_add_plus_one1=Equal_info_between_of_the_cirlce_of_the_file[lenf6:lenf6-22]
                                                 
                                                 
                                                 Number_of_the_file1= int(Equal_info_between_of_the_cirlce_of_the_file1, 2)                                      
                                                                            
-                                                Number_add_plus_one=Equal_info_between_of_the_cirlce_of_the_file[Deep4-20:Deep4-20+6]
+                                                Number_add_plus_one=Equal_info_between_of_the_cirlce_of_the_file[Deep4-22:Deep4-22+5]
                                                 
  
                                                                                            
                                                 Number_of_the_file = int(Equal_info_between_of_the_cirlce_of_the_file, 2)
                                                 Number_add_plus_one_2 = int(Number_add_plus_one, 2)
         
-                                                Hole_Number_information=(2**Deep5+Number_of_the_file1-20)-1
+                                                Hole_Number_information=(2**Deep5-5+Number_of_the_file1-22)-1
                                                 add_ones_together=Hole_Number_information+Number_add_plus_one_2
                                                 Number_of_the_file=Number_of_the_file*add_ones_together
                                                 
