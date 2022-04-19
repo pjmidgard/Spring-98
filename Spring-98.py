@@ -485,18 +485,18 @@ class compression:
 
                                                 sda10=Equal_info_between_of_the_cirlce_of_the_file[0:16]
                                                 Deep5 = int(sda10, 2)
-                                                Deep5=Deep5+2
+                                                Deep5=Deep5+1
                                                 Deep4=Deep5
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                Deep7=Deep5-2
+                                                Deep7=Deep5-1
                                                 
                                                 Times_6=Equal_info_between_of_the_cirlce_of_the_file[0:48]
                                                 T = int(Times_6, 2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[48:]
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
                                                 print("Deep: ")
-                                                print(Deep7-25)
+                                                print(Deep7-26)
                                                 
                                         if   Circle_times2>0:
                                         	Translate_info_Decimal_2=0
