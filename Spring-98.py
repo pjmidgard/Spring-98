@@ -506,14 +506,14 @@ class compression:
                                         if C==1 and T!=0:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Translate_info_Decimal_2:]
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                Number_add_plus_one1=Equal_info_between_of_the_cirlce_of_the_file[lenf6-Deep4-20:lenf6]
+                                                Number_add_plus_one1=Equal_info_between_of_the_cirlce_of_the_file[lenf6:lenf6-20]
                                                 
-                                                Equal_info_between_of_the_cirlce_of_the_file1=Equal_info_between_of_the_cirlce_of_the_file[Deep4-20:lenf6-Deep4]
-                                                Number_add_plus_one=Equal_info_between_of_the_cirlce_of_the_file[lenf6-Deep4-20:lenf6]
                                                 
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Deep4-20:lenf6-Deep4]
-                                        
-                                                Number_of_the_file1= int(Equal_info_between_of_the_cirlce_of_the_file1, 2)
+                                                Number_of_the_file1= int(Equal_info_between_of_the_cirlce_of_the_file1, 2)                                      
+                                                                           
+                                                Number_add_plus_one=Equal_info_between_of_the_cirlce_of_the_file[Deep4-20:Deep4-20+6]
+                                                
+ 
                                                                                            
                                                 Number_of_the_file = int(Equal_info_between_of_the_cirlce_of_the_file, 2)
                                                 Number_add_plus_one_2 = int(Number_add_plus_one, 2)
@@ -568,12 +568,7 @@ class compression:
                                             	Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[3:]
                                             	lenf14=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             	#print(lenf14)
-                                            	lenf16=lenf14%8
-                                            	if lenf16!=0 or lenf14>=((2**40)-1)*8 or Corrupted==1:
-
-                                            		print("file corrupted")
-                                            		raise SystemExit
-                                            		
+                                
                                             	
                                             	lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             	add_bits=""
