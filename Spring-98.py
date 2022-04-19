@@ -33,18 +33,18 @@ class compression:
                         
                         if x==True:
                                 Deep=int(Deep)
-                                Deep6=65535-5
+                                Deep6=65535-6
 
                                 if Deep>Deep6:
                                         Deep=Deep6
 
                                 if Deep<1:
-                                        Deep=6
+                                        Deep=7
                                                 
-                                Deep=Deep+5
-                                Deep2=Deep+2
+                                Deep=Deep+6
+                                Deep2=Deep+1
                                 Deep3=Deep*2
-                                print(Deep-25)
+                                print(Deep-6)
 
                         i=1
 
@@ -506,19 +506,20 @@ class compression:
                                         if C==1 and T!=0:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Translate_info_Decimal_2:]
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                Number_add_plus_one1=Equal_info_between_of_the_cirlce_of_the_file[Deep4:Deep4+5]
+                                                Number_add_plus_one1=Equal_info_between_of_the_cirlce_of_the_file[Deep4-6:Deep4+6]
                                                 
                                                 
                                                 Number_of_the_file1= int(Equal_info_between_of_the_cirlce_of_the_file1, 2)                                      
                                                                            
-                                                Number_add_plus_one=Equal_info_between_of_the_cirlce_of_the_file[Deep4+5:lenf6]
+                                                Number_add_plus_one=Equal_info_between_of_the_cirlce_of_the_file[Deep4+6:lenf6]
                                                 
  
                                                                                            
                                                 Number_of_the_file = int(Equal_info_between_of_the_cirlce_of_the_file, 2)
                                                 Number_add_plus_one_2 = int(Number_add_plus_one, 2)
         
-                                                Hole_Number_information=(2**Deep5+Number_of_the_file1-19)-1
+                                                Hole_Number_information=(2**(Deep5+Number_of_the_file1-7))-1
+
                                                 add_ones_together=Hole_Number_information+Number_add_plus_one_2
                                                 Number_of_the_file=Number_of_the_file*add_ones_together
                                                 
