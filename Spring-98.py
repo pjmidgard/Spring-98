@@ -43,6 +43,7 @@ class compression:
                                                 
                                 Deep=Deep+6
                                 Deep2=Deep+2
+                                Dee11=Deep   
                                 Deep3=8
                                 Deep4=Deep+31
                                 Deep12=0
@@ -369,7 +370,7 @@ class compression:
 
                                     if   lenfS<=Deep3 or compress_or_not_compress==2:
                                     	   
-                                            Equal_info_between_of_the_cirlce_of_the_file0=bin(Deep)[2:]
+                                            Equal_info_between_of_the_cirlce_of_the_file0=bin(Deep11)[2:]
                                             lenf=len(Equal_info_between_of_the_cirlce_of_the_file0)
 
                                             add_bits8=""
