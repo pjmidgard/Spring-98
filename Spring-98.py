@@ -45,6 +45,7 @@ class compression:
                                 Deep2=Deep+2
                                 Deep3=8
                                 Deep4=Deep+31
+                                Deep12=0
                                 print(Deep-6)
 
                         i=1
@@ -276,6 +277,7 @@ class compression:
                                                 
                                                 Deep2=Deep2+1
                                                 Deep=Deep+1
+                                                Deep12=Deep12+1 
                                                 e=(2**Deep2)-1
                                                 g=0
                                                 f=0
@@ -287,15 +289,14 @@ class compression:
                                     		nameas=name+".bin"
                                     if Number_of_the_file<0:
                                                         compress_or_not_compress=2
-                                    
-                                  
+                                                 
                                     if compress_or_not_compress==1:
                                     	
                                     	    Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
                                     	    
                                     if compress_or_not_compress==1:
                                     	                          
-                                            Equal_info_between_of_the_cirlce_of_the_file_24=bin(Deep-7)[2:]
+                                            Equal_info_between_of_the_cirlce_of_the_file_24=bin(Deep12)[2:]
                                             hr=5
                                             
                                         	
@@ -305,6 +306,8 @@ class compression:
 
                                             if compress_or_not_compress==1:
                                                     Deep=7
+                                                    Deep2=Deep+2
+                                                    Deep12=0
                                                     add_bits5=""
                                                     count_bits=hr-lenf%hr
                                                     z=0
