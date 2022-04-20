@@ -11,7 +11,7 @@ Make_togher=""
 
 namez = input("c,  compress or e, extract? ")
 
-#@Author Jurijus Pacalovas
+#@Author's Jurijus Pacalovas
 class compression:
        
         def cryptograpy_compression4(self):
