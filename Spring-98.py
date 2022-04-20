@@ -498,7 +498,7 @@ class compression:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[48:]
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
                                                 print("Deep: ")
-                                                print(Deep7)
+                                                print(Deep7-6)
                                                 
                                         if   Circle_times2>0:
                                         	Translate_info_Decimal_2=0
