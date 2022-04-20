@@ -301,7 +301,7 @@ class compression:
                                             hr=5
                                             
                                         	
-                                            lenf=len(Equal_info_between_of_the_cirlce_of_the_file_23)
+                                            lenf=len(Equal_info_between_of_the_cirlce_of_the_file_24)
                                             if lenf>5:
                                             	compress_or_not_compress=2
 
