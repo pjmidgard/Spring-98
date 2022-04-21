@@ -526,7 +526,7 @@ class compression:
                                                 Number_of_the_file = int(Equal_info_between_of_the_cirlce_of_the_file, 2)
                                                 Number_add_plus_one_2 = int(Number_add_plus_one, 2)
         
-                                                Hole_Number_information=(2**Number_of_the_file2+2)-1
+                                                Hole_Number_information=(2**(Number_of_the_file2+2))-1
 
                                                 add_ones_together=Hole_Number_information+Number_add_plus_one_2
                                                 Number_of_the_file=Number_of_the_file*add_ones_together
