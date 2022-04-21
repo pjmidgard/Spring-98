@@ -8,4 +8,5 @@ Deep: 7
 7+63=70 bits.
 
 This program is for Quantum Supercomputers.
+
 Here's future compression
