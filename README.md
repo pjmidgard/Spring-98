@@ -5,6 +5,6 @@ Algorithm: Division plus 1 this and write a bit less or more and multiply by thi
 
 Deep: 7
 
-7+64=71 bits.
+7+63=70 bits.
 
 This program is for Quantum Supercomputers.
