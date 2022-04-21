@@ -257,7 +257,7 @@ class compression:
                                     
                                     nameas=name+".bin" 
                                     
-                                    e=(2**Deep2)-1
+                                    e=(2**(Deep2))-1
                                     g=0
                                     f=0
                                     
@@ -274,12 +274,12 @@ class compression:
                                                 
                                                 g=g+1
                                           
-                                        if g>(2**Deep-5)-1:
+                                        if g>(2**(Deep-5))-1:
                                                 
                                                 Deep2=Deep2+1
                                                 Deep=Deep+1
                                                 Deep12=Deep12+1 
-                                                e=(2**Deep2)-1
+                                                e=(2**(Deep2))-1
                                                 g=0
                                                 f=0
                                                 if Deep==Deep4:
