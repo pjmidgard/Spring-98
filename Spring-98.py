@@ -519,7 +519,7 @@ class compression:
                                           
                                                 Number_of_the_file2=Number_of_the_file1+7
                                                                            
-                                                Number_add_plus_one=Equal_info_between_of_the_cirlce_of_the_file[lenf6-5-1-Number_of_the_file1:lenf6]
+                                                Number_add_plus_one=Equal_info_between_of_the_cirlce_of_the_file[lenf6-5+5-1-Number_of_the_file1:lenf6-5]
                                                 
  
                                                                                            
