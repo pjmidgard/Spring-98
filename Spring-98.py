@@ -23,7 +23,6 @@ class compression:
                         raise SystemExit
                 if namez=="c" or namez=="e":        
                     if namez=="c":
-
                         Deep3=8
 
                         i=1
@@ -81,7 +80,6 @@ class compression:
 
                     Prime_Not=""
                     Times_6=""
-                    Size_of_file1=""
 
                     Translate_info_Decimal=""
 
@@ -106,8 +104,6 @@ class compression:
 
                         lenf1=len(data)
                         lenf7=len(data)
-                        if lenf7>(2**32)-1:
-                        	 raise SystemExit
                         if lenf7==0:
                         	 raise SystemExit
                         
@@ -208,6 +204,11 @@ class compression:
 
                                     Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file_2
 
+                                    
+                                    if   Circle_times2==0 and SpinS==0:
+                                    	Equal_info_between_of_the_cirlce_of_the_file="1"+Equal_info_between_of_the_cirlce_of_the_file
+                                    	SpinS=1
+
                                     lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)                      
                                     Equal_info_between_of_the_cirlce_of_the_file_17=""
                                 
@@ -226,75 +227,81 @@ class compression:
                                     
                                     Equal_info_between_of_the_cirlce_of_the_file_17=""
                  
-                                    if   Circle_times2==0 and SpinS==0:
-                                    	Equal_info_between_of_the_cirlce_of_the_file="1"+Equal_info_between_of_the_cirlce_of_the_file
-                                    	SpinS=1
+                                    
 
-                                    lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)	
-
-                                    if Circle_times2>=(2**48)-3:
+                                    if Circle_times2>=(2**8)-2:
                                             compress_or_not_compress=2
-                                            
-                                    Number_of_the_file = int(Equal_info_between_of_the_cirlce_of_the_file, 2)
 
-                                    Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
-                                    lenf6=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                    
-                                    Number_of_the_file=Number_of_the_file-(2**(lenf6-1)-1)
-                                    
+                                    lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
+                                    #print(lenf6)
                                             
-                                                   
-                                    Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
-                                    Equal_info_between_of_the_cirlce_of_the_file_19=Equal_info_between_of_the_cirlce_of_the_file_17[0:1]
-                                    Equal_info_between_of_the_cirlce_of_the_file_20=Equal_info_between_of_the_cirlce_of_the_file_17[1:]
-                                    Equal_info_between_of_the_cirlce_of_the_file_18=Equal_info_between_of_the_cirlce_of_the_file_19+Equal_info_between_of_the_cirlce_of_the_file_20[::-1]
-                                                        
-                                             
-                                    lenf=len(Equal_info_between_of_the_cirlce_of_the_file_18)
-                                    if Equal_info_between_of_the_cirlce_of_the_file_18[lenf-1:lenf]=="1":
-                                            bit="1"
-                                            add_bits7=""
-                                            Block=lenf6-1
-                                            add_bits19=bit+add_bits19
-                                            lenf=len(Equal_info_between_of_the_cirlce_of_the_file_18)
-                                            
+                                    
+                                    Find_center_info=Equal_info_between_of_the_cirlce_of_the_file
+
+                                    block=0
+                                    Find_Save=1
+                                    Find_Save4=0
+                                    Find_Save5=0
+                                    block2=0
+
+                                    while block<lenf6:
+
+                                           Find_center_info1=Find_center_info[block:block+6]
+                                           Find_center_info2=Find_center_info[block:block+5]
+                                           Find_center_info3=Find_center_info[block2:block2+6]
+
+                                           if Find_center_info3=="111111" and Find_Save5==0:
+                                                Find_center_info=Find_center_info[:block2]+"000000"+Find_center_info[block2+6:]
                                                 
-                                        
-                                            
-                                    elif Equal_info_between_of_the_cirlce_of_the_file_18[lenf-1:lenf]=="0":
-                                            bit="1"
-                                            add_bits7=""
-                                            Block=lenf6-1
-                                            add_bits19=bit+add_bits19
-                                            lenf=len(Equal_info_between_of_the_cirlce_of_the_file_18)
-                                            
-                                            
-                                    count_bits=Block-lenf
-                                    z=0
-                                    if count_bits!=0:
-                                        if count_bits!=Block:
-                                                while z<count_bits:
-                                                        add_bits19=bit+add_bits19
-                                                        z=z+1
-                                                                        
-                                    Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_18+add_bits19
-                                    lenfS=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                   
-                                    
-                                    #print(Number_of_the_file)           
-                                    if compress_or_not_compress==1:
-                                    		nameas=name+".bin"
-                                    
-                                    if Number_of_the_file<0:
-                                                        compress_or_not_compress=2
+                                               
+
+                                                   
+                                           elif Find_center_info1=="000000" and Find_Save4==0 and Find_Save5==0 and Find_Save==5:
+                                                    Find_Save_binary=bin(Find_Save)[2:]
+                                                    lenf=len(Find_Save_binary)
+
+                                                    add_bits8=""
+                                                    count_bits=5-lenf%5
+                                                    z=0
+                                                    if count_bits!=0:
+                                                        if count_bits!=5:
+                                                                while z<count_bits:
+                                                                        add_bits8="0"+add_bits8
+                                                                        z=z+1
+
+                                                    Find_center_info3=add_bits8+Find_Save_binary
+                                                    check_numner_equal=add_bits8+Find_Save_binary
+                                                    
+                                                    Find_Save4=1
+                                                    if check_numner_equal!=Find_center_info2:
+                                                            
+                                                            #print(check_numner_equal)
+                                                            Find_center_info=Find_center_info[:block]+Find_center_info3+Find_center_info[block+6:]
+                                                            
+                                                    elif check_numner_equal==Find_center_info2:
+                                                            Find_center_info=Find_center_info[:block2]+"111111"+Find_center_info[block2:]
+                                                            Find_center_info=Find_center_info[:block]+Find_center_info[block+6:]
                                                         
-                                    
-                                  
+                                                            
+                                                            
+                                                    
+                                           Find_Save=Find_Save+1
+                                           if Find_Save==30:
+                                                   Find_Save=1
+                                                   block2=block
+                                                   Find_Save4=0
+                                                   
+                                           block=block+6
+                                     
+                                           
+                                    Equal_info_between_of_the_cirlce_of_the_file_17=Find_center_info
+                                    Equal_info_between_of_the_cirlce_of_the_file_2=Equal_info_between_of_the_cirlce_of_the_file_17
                                     lenfS=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                    #print(lenfS)
                                     
                                     
-                                    
-                                    
+                                    if lenf6==lenfS:
+                                        Deep3=lenfS
                                     
                                     if compress_or_not_compress==2 and Circle_times2==0:
                                                     Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[1:]
@@ -316,22 +323,29 @@ class compression:
                                         
                                         if compress_or_not_compress==2:
                                         	Circle_times3=Circle_times2-1
-                                        	
+
+                                    
+
+                                    
+                                   
+                                    Circle_times2=Circle_times2+1
+                                    
                                     if   lenfS<=Deep3 or compress_or_not_compress==2:
                                     	   
-                                            Equal_info_between_of_the_cirlce_of_the_file_29=bin(Circle_times3)[2:]
-                                            lenf=len(Equal_info_between_of_the_cirlce_of_the_file_29)
+                                            Times_comperession=bin(Circle_times3)[2:]
+                                            lenf=len(Times_comperession)
 
                                             add_bits7=""
-                                            count_bits=48-lenf%48
+                                            count_bits=8-lenf%8
                                             z=0
                                             if count_bits!=0:
-                                                if count_bits!=48:
+                                                if count_bits!=8:
                                                         while z<count_bits:
                                                          	add_bits7="0"+add_bits7
                                                          	z=z+1    
+                                    
 
-                                    if   lenfS<=Deep3 or compress_or_not_compress==2:
+                                    if   lenfS<=Deep3  or compress_or_not_compress==2:
                                                 Equal_info_between_of_the_cirlce_of_the_file_17="1"+Equal_info_between_of_the_cirlce_of_the_file_17
                                                 lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                                 add_bits=""
@@ -346,10 +360,11 @@ class compression:
                                                                         add_bits="0"+add_bits
                                                                         z=z+1
 
+                                   
+
                                     if   lenfS<=Deep3 or compress_or_not_compress==2:
-                                            lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                            
-                                            Equal_info_between_of_the_cirlce_of_the_file_17=add_bits7+Equal_info_between_of_the_cirlce_of_the_file_29+add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+                                            lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)                                           
+                                            Equal_info_between_of_the_cirlce_of_the_file_17=add_bits7+Times_comperession+add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
 
                                     if   lenfS<=Deep3 or compress_or_not_compress==2:
                                                 
@@ -398,51 +413,107 @@ class compression:
                                     Prime_Not=0
                                  
                                     if C==1:
-                                        if   Circle_times2==0:
+                                        T=2
 
-                                                Translate_info_Decimal=Equal_info_between_of_the_cirlce_of_the_file[0:8]
-                                                Translate_info_Decimal_2 = int(Translate_info_Decimal, 2)
-                                                if Translate_info_Decimal_2>7:
-                                                        Corrupted=1
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
-                                                lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-
-                                                sda10=Equal_info_between_of_the_cirlce_of_the_file[0:16]
-                                                Deep5 = int(sda10, 2)
-                                                Deep5=Deep5+2
-                                                Deep4=Deep5-1
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
-                                                lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                Deep7=Deep5-2
-                                                
-                                                Times_6=Equal_info_between_of_the_cirlce_of_the_file[0:48]
-                                                T = int(Times_6, 2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[48:]
-                                                lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                print("Deep: ")
-                                                print(Deep7-6)
-                                                
-                                        if   Circle_times2>0:
-                                        	Translate_info_Decimal_2=0
+                                        if Equal_info_between_of_the_cirlce_of_the_file[0:1]=="1":
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[1:]
                                         
-                                        	
+                                        elif Equal_info_between_of_the_cirlce_of_the_file[0:2]=="01":
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[2:]
+                                                
+                                        elif Equal_info_between_of_the_cirlce_of_the_file[0:3]=="001":
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[3:]
+
+
+                                        elif Equal_info_between_of_the_cirlce_of_the_file[0:4]=="0001":
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[4:]
+
+                                        elif Equal_info_between_of_the_cirlce_of_the_file[0:5]=="00001":
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[5:]
+
+                                        elif Equal_info_between_of_the_cirlce_of_the_file[0:6]=="000001":
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[6:]
+                                        elif Equal_info_between_of_the_cirlce_of_the_file[0:7]=="0000001":
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[7:]
+    
+                                        elif Equal_info_between_of_the_cirlce_of_the_file[0:8]=="00000001":
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
+        
     
                                         if C==1 and T!=0:
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Translate_info_Decimal_2:]
-                                                lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                Number_add_plus_one=Equal_info_between_of_the_cirlce_of_the_file[lenf6-Deep4:lenf6-1]
-                                                Prime_Not=Equal_info_between_of_the_cirlce_of_the_file[lenf6-1:lenf6]
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[0:lenf6-Deep4]
-                                        
+                                                    Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file
+                                                    lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
+
+                                                    Find_center_info=Equal_info_between_of_the_cirlce_of_the_file
+                                                    
+
+                                                    block=0
+                                                    Find_Save=1
+                                                    Find_Save4=0
+                                                    Find_Save5=0
+                                                    block2=0
+
+                                                    while block<lenf6:
+
+                                                           Find_center_info1=Find_center_info[block:block+6]
+                                                           Find_center_info2=Find_center_info[block:block+5]
+                                                           Find_center_info3=Find_center_info[block2:block2+6]
+
+                                                           if Find_center_info3=="000000" and Find_Save5==0:
+                                                                Find_center_info=Find_center_info[:block2]+"111111"+Find_center_info[block2+6:]
+                                                                
+                                                               
+                                                          
+                                                                  
+                                                                   
+                                                           if Find_Save4==0 and Find_Save5==0:
+                                                                    Find_Save_binary=bin(Find_Save)[2:]
+                                                                    lenf=len(Find_Save_binary)
+
+                                                                    add_bits8=""
+                                                                    count_bits=5-lenf%5
+                                                                    z=0
+                                                                    if count_bits!=0:
+                                                                        if count_bits!=5:
+                                                                                while z<count_bits:
+                                                                                        add_bits8="0"+add_bits8
+                                                                                        z=z+1
+
+                                                                    Find_center_info3=add_bits8+Find_Save_binary
+                                                                    check_numner_equal=add_bits8+Find_Save_binary
+                                                                    
+                                                                    Find_Save4=1
+                                                                    if check_numner_equal==Find_center_info2:
+                                                                            Find_center_info=Find_center_info[:block]+"000000"+Find_center_info[block+6:]
+                                                                          
+                                                                    elif check_numner_equal=="111111":
+                                                                            Find_center_info=Find_center_info[:block2]+Find_center_info[block2+6:]
+                                                                            Find_center_info=Find_center_info[:block2]+Find_center_info[block2+6:]
+                                                                            Find_Save5=1
+                                                                            
+
+                                                                         
+                                                           
+                                                                            
+                                                                            
+                                                                            
+                                                                    
+                                                           Find_Save=Find_Save+1
+                                                           if Find_Save==30:
+                                                                   Find_Save=1
+                                                                   block2=block
+                                                                   Find_Save4=0  
+                                                           block=block+6
+                                                                   
+                                                           
+                                                                  
+                                                           
+                                                     
+                                                           
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Find_center_info
+                                                    lenfS=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                                                
                                                 
-                                                Number_of_the_file = int(Equal_info_between_of_the_cirlce_of_the_file, 2)
-                                                Number_of_the_file=Number_of_the_file+65535
-                                                Number_add_plus_one_2 = int(Number_add_plus_one, 2)
-                                                Prime_Not = int(Prime_Not, 2)
-                                                Hole_Number_information=(2**Deep5)-1
-                                                add_ones_together=Hole_Number_information+Number_add_plus_one_2
-                                                Number_of_the_file=Number_of_the_file*add_ones_together
-                                                Number_of_the_file=Number_of_the_file+Prime_Not
                                        
                                     Times_6=Number_add_plus_one
                                     Number_add_plus_one=""
@@ -452,7 +523,7 @@ class compression:
                                     Prime_Not=""
                                     
                                     
-                                    Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
+                                    
                                      
                                     Equal_info_between_of_the_cirlce_of_the_file_2=Equal_info_between_of_the_cirlce_of_the_file_17
                                    
@@ -471,29 +542,14 @@ class compression:
                                         
                                         if  Circle_times2==T:
                                         	   
-                                            if C==1 and T==0:
-                                            	Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file
-                                            	lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                            	add_bits=""
-                                            	count_bits=8-lenf%8
-                                            	z=0
-                                            	if count_bits!=0:
-                                            	        if count_bits!=8:
-                                            	            while z<count_bits:
-                                            	            	add_bits="0"+add_bits
-                                            	            	z=z+1
-                                            	Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+                                            
                                         
                                             if C==1 and T!=0:
  
-                                            	Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[3:]
+                                            	Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_17[1:]
                                             	lenf14=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             	#print(lenf14)
-                                            	lenf16=lenf14%8
-                                            	if lenf16!=0 or lenf14>=((2**40)-1)*8 or Corrupted==1:
-
-                                            		print("file corrupted")
-                                            		raise SystemExit
+                                            	
                                             		
                                             	
                                             	lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
