@@ -251,7 +251,7 @@ class compression:
                                            Find_center_info3=Find_center_info[block2:block2+6]
 
                                            if Find_center_info3=="111111" and Find_Save5==0:
-                                                Find_center_info=Find_center_info[:block2]+"000000"+Find_center_info[block2+6:]
+                                                Find_center_info=Find_center_info[:block2]+"000000"+Find_center_info[block2+6:]#000000-111111
                                                 
                                                
 
@@ -276,11 +276,11 @@ class compression:
                                                     if check_numner_equal!=Find_center_info2:
                                                             
                                                             #print(check_numner_equal)
-                                                            Find_center_info=Find_center_info[:block]+Find_center_info3+Find_center_info[block+6:]
+                                                            Find_center_info=Find_center_info[:block]+Find_center_info3+Find_center_info[block+6:]#5
                                                             
                                                     elif check_numner_equal==Find_center_info2:
-                                                            Find_center_info=Find_center_info[:block2]+"111111"+Find_center_info[block2:]
-                                                            Find_center_info=Find_center_info[:block]+Find_center_info[block+6:]
+                                                            Find_center_info=Find_center_info[:block2]+"111111"+Find_center_info[block2:]#1 or 0
+                                                            Find_center_info=Find_center_info[:block]+Find_center_info[block+5:]#00101 delete change on the top 111111
                                                         
                                                             
                                                             
