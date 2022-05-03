@@ -276,7 +276,7 @@ class compression:
                                                     if check_numner_equal!=Find_center_info2:
                                                             
                                                             #print(check_numner_equal)
-                                                            Find_center_info=Find_center_info[:block]+Find_center_info3+Find_center_info[block+6:]#5
+                                                            Find_center_info=Find_center_info[:block]+Find_center_info3+Find_center_info[block+6:]#5 000000-00101
                                                             
                                                     elif check_numner_equal==Find_center_info2:
                                                             Find_center_info=Find_center_info[:block2]+"111111"+Find_center_info[block2:]#1 or 0
